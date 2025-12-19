@@ -25,6 +25,13 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
     Vector3 velocity;
     Vector3 currentMove;
+
+    [Header("Turn Skew")]
+public float maxDutch = 6f;      // ŒX‚«Šp“x
+public float dutchSpeed = 10f;   // –ß‚é‘¬‚³
+
+float currentDutch;
+
     float currentRotationVelocity;
 
     Transform cam;
@@ -112,5 +119,6 @@ public class PlayerController : MonoBehaviour
         // ===== ‘¬“xŽæ“¾ =====
         Vector3 horizontalVelocity = new Vector3(controller.velocity.x, 0, controller.velocity.z);
         currentSpeed = horizontalVelocity.magnitude;
+       // Debug.Log(targetSpeed);
     }
 }
