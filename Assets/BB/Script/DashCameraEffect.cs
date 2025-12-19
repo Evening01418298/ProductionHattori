@@ -63,9 +63,9 @@ public class DashCameraEffect : MonoBehaviour
         if (vignette != null)
         {
             float targetVignette = maxVignette * speedRatio;
-
+            Debug.Log(targetVignette);
             // ダッシュ開始時だけ一瞬強め
-            if (isDash && speedRatio > 0.9f)
+            if (isDash && speedRatio > 0.8f)
                 targetVignette += 0.15f;
 
             vignette.intensity.value = Mathf.Lerp(
